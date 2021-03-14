@@ -10,6 +10,8 @@
 #include "sdkconfig.h"
 #include "nimconfig_rename.h"
 
+#define CONFIG_NIMBLE_CPP_IDF
+
 #ifdef _DOXYGEN_
 
 /** @brief Un-comment to change the number of simultaneous connections (esp controller max is 9) */

@@ -14,17 +14,19 @@
 
 #ifndef COMPONENTS_NIMBLEADVERTISEDDEVICE_H_
 #define COMPONENTS_NIMBLEADVERTISEDDEVICE_H_
-#include "sdkconfig.h"
-#if defined(CONFIG_BT_ENABLED)
-
 #include "nimconfig.h"
+#if defined(CONFIG_BT_ENABLED)
 #if defined(CONFIG_BT_NIMBLE_ROLE_OBSERVER)
 
 #include "NimBLEAddress.h"
 #include "NimBLEScan.h"
 #include "NimBLEUUID.h"
 
+#if defined(CONFIG_NIMBLE_CPP_IDF)
 #include "host/ble_hs_adv.h"
+#else
+#include "nimble/nimble/host/include/host/ble_hs_adv.h"
+#endif
 
 #include <map>
 #include <vector>
