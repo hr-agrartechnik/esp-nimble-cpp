@@ -19,6 +19,7 @@
 
 #include "NimBLEScan.h"
 #include "NimBLEDevice.h"
+#define LOG_LOCAL_LEVEL ESP_LOG_WARN
 #include "NimBLELog.h"
 
 #include <string>
