@@ -6,6 +6,7 @@
  */
 #include "sdkconfig.h"
 #include "FreeRTOS.h"
+#include "esp_log.h"
 #include "NimBLELog.h"
 
 #include <freertos/FreeRTOS.h>   // Include the base FreeRTOS definitions
