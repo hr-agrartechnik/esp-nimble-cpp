@@ -19,6 +19,8 @@
 
 #include "NimBLEScan.h"
 #include "NimBLEDevice.h"
+#undef LOG_LOCAL_LEVEL
+#define LOG_LOCAL_LEVEL ESP_LOG_WARN
 #include "NimBLELog.h"
 
 #include <string>
@@ -41,6 +43,7 @@ NimBLEScan::NimBLEScan() {
     m_pTaskData                      = nullptr;
     m_duration                       = BLE_HS_FOREVER; // make sure this is non-zero in the event of a host reset
     m_maxResults                     = 0xFF;
+    m_scanCompleteCB				 = nullptr;
 }
 
 
