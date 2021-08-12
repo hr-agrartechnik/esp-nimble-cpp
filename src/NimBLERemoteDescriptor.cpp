@@ -170,6 +170,7 @@ std::string NimBLERemoteDescriptor::readValue() {
                 if (retryCount && pClient->secureConnection())
                     break;
             /* Else falls through. */
+            /* no break */
             default:
                 return value;
         }
@@ -330,6 +331,7 @@ bool NimBLERemoteDescriptor::writeValue(const uint8_t* data, size_t length, bool
                 if (retryCount && pClient->secureConnection())
                     break;
             /* Else falls through. */
+            /* no break */
             default:
                 return false;
         }

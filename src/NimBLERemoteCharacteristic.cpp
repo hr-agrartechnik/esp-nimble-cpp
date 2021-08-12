@@ -508,6 +508,7 @@ std::string NimBLERemoteCharacteristic::readValue(time_t *timestamp) {
                 if (retryCount && pClient->secureConnection())
                     break;
             /* Else falls through. */
+            /* no break */
             default:
                 NIMBLE_LOGE(LOG_TAG, "<< readValue rc=%d", rc);
                 return value;
@@ -785,6 +786,7 @@ bool NimBLERemoteCharacteristic::writeValue(const uint8_t* data, size_t length, 
                 if (retryCount && pClient->secureConnection())
                     break;
             /* Else falls through. */
+            /* no break */
             default:
                 NIMBLE_LOGE(LOG_TAG, "<< writeValue, rc: %d", rc);
                 return false;
