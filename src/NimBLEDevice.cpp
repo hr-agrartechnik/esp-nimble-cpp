@@ -728,6 +728,7 @@ NimBLEAddress NimBLEDevice::getWhiteListAddress(size_t index) {
     nimble_port_run();
 
     nimble_port_freertos_deinit();
+    NIMBLE_LOGI(LOG_TAG, "BLE Host Task Started DONE");
 } // host_task
 
 
